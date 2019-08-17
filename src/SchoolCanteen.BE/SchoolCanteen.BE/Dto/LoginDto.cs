@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.Web;
+using Newtonsoft.Json;
 
 namespace SchoolCanteen.BE.Dto
 {
     public class LoginDto
     {
-        [DataMember(Name = "login")]
+        [JsonProperty(PropertyName = "login")]
         public string Login { get; set; }
 
-        [DataMember(Name = "password")]
+        [JsonProperty(PropertyName = "password")]
         public string Password { get; set; }
     }
 }
