@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using SchoolCanteen.BE.Entities.Entities;
+using SchoolCanteen.BE.Data.Entities;
 
-namespace SchoolCanteen.BE.Entities.Services
+namespace SchoolCanteen.BE.Data.Services
 {
     public class StudentService
     {

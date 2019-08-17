@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SchoolCanteen.BE.Entities.Entities
+namespace SchoolCanteen.BE.Data.Entities
 {
     public enum Role
     {

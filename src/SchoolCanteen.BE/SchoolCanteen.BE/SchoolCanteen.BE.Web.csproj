@@ -266,9 +266,9 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SchoolCanteen.BE.Entities\SchoolCanteen.BE.Entities.csproj">
-      <Project>{274dd1f5-e444-4060-a90d-9510e3ab204b}</Project>
-      <Name>SchoolCanteen.BE.Entities</Name>
+    <ProjectReference Include="..\SchoolCanteen.BE.Data\SchoolCanteen.BE.Data.csproj">
+      <Project>{14ccbd51-d3fa-4163-86bf-52e7d225e1f0}</Project>
+      <Name>SchoolCanteen.BE.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -317,5 +317,5 @@
     </ItemGroup>
     <MakeDir Directories="$(WebProjectOutputDir)\bin\roslyn" />
     <Copy SourceFiles="@(RoslynFiles)" DestinationFolder="$(WebProjectOutputDir)\bin\roslyn" SkipUnchangedFiles="true" Retries="$(CopyRetryCount)" RetryDelayMilliseconds="$(CopyRetryDelayMilliseconds)" />
-</Target>
+  </Target>
 </Project>

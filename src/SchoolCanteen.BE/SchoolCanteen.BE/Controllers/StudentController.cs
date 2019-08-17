@@ -4,8 +4,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using SchoolCanteen.BE.Entities.Entities;
-using SchoolCanteen.BE.Entities.Services;
+using SchoolCanteen.BE.Data.Entities;
+using SchoolCanteen.BE.Data.Services;
 
 namespace SchoolCanteen.BE.Controllers
 {

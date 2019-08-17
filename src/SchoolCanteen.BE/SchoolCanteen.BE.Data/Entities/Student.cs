@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SchoolCanteen.BE.Entities.Entities
+namespace SchoolCanteen.BE.Data.Entities
 {
     public class Student
     {
