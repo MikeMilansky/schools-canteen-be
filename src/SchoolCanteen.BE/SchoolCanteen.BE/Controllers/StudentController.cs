@@ -13,9 +13,9 @@ namespace SchoolCanteen.BE.Controllers
     public class StudentController : ApiController
     {
         private StudentService _studentService = new StudentService();
-        // GET: api/Student
-        [Route("getAll")]
+
         [HttpGet]
+        [Route("getAll")]
         public IEnumerable<Student> Get()
         {
             var students = _studentService.GetAll();
@@ -24,9 +24,11 @@ namespace SchoolCanteen.BE.Controllers
         }
 
         [HttpGet]
-        public string Get(int id)
+        [Route("{id}")]
+        public Student Get(int id)
         {
-            return "value";
+            var students = _studentService.GetAll();
+            return students.FirstOrDefault(x => x.Id == id);
         }
     }
 }

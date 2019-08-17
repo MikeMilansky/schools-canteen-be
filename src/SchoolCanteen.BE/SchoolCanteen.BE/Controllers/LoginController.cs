@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using SchoolCanteen.BE.Data.Entities;
+using SchoolCanteen.BE.Dto;
 
 namespace SchoolCanteen.BE.Controllers
 {
@@ -13,19 +14,19 @@ namespace SchoolCanteen.BE.Controllers
     {
         [Route("")]
         [HttpPost]
-        public IHttpActionResult Login(string login, string password)
+        public IHttpActionResult Login(LoginDto dto)
         {
-            if (login == "Admin")
+            if (dto.Login == "Admin")
                 return Ok(new
                 {
-                    User = login,
+                    User = dto.Login,
                     Role = Role.School,
                     Token = "YWxmZGtzamYgc2RmbDtranNkIGxzbGRqZmxza2RqZiANCnNkZnNsZA=="
                 });
 
             return Ok(new
             {
-                User = login,
+                User = dto.Login,
                 Role = Role.Parent,
                 Token = "DQpUaGlzIGlzIHNvbWUgdGV4dCB0byBjb252ZXJ0IHZpYSBDcnlwdA=="
             });
