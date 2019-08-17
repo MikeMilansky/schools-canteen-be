@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using SchoolCanteen.BE.Entities.Entities;
 
 namespace SchoolCanteen.BE.Controllers
 {
@@ -14,11 +15,19 @@ namespace SchoolCanteen.BE.Controllers
         [HttpPost]
         public IHttpActionResult Login(string login, string password)
         {
+            if (login == "Admin")
+                return Ok(new
+                {
+                    User = login,
+                    Role = Role.School,
+                    Token = "YWxmZGtzamYgc2RmbDtranNkIGxzbGRqZmxza2RqZiANCnNkZnNsZA=="
+                });
+
             return Ok(new
             {
                 User = login,
-                Role = "Parent",
-                Token = "VGhpcyBpcyBzb21lIHRleHQgdG8gY29udmVydCB2aWEgQ3J5cHQu"
+                Role = Role.Parent,
+                Token = "DQpUaGlzIGlzIHNvbWUgdGV4dCB0byBjb252ZXJ0IHZpYSBDcnlwdA=="
             });
         }
     }

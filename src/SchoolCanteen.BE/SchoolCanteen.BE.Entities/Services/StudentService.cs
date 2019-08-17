@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using SchoolCanteen.BE.Entities.Entities;
 
 namespace SchoolCanteen.BE.Entities.Services
 {
