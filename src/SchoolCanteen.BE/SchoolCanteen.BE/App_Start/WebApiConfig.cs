@@ -11,8 +11,8 @@ namespace SchoolCanteen.BE
 		public static void Register(HttpConfiguration config)
 		{
             // Web API configuration and services
-            //var corsAttr = new EnableCorsAttribute("https://schools-canteen-jam.azurewebsites.net", "*", "*");
-            config.EnableCors();
+            var corsAttr = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(corsAttr);
 
             // Web API routes
             config.MapHttpAttributeRoutes();
