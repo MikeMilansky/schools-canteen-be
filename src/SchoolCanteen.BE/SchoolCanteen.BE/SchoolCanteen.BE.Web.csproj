@@ -193,7 +193,8 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
-    <Compile Include="Dto\LoginDto.cs" />
+    <Compile Include="Dto\LoginRequestDto.cs" />
+    <Compile Include="Dto\MenuResponseDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

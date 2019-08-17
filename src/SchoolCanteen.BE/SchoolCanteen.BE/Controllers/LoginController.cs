@@ -14,14 +14,14 @@ namespace SchoolCanteen.BE.Controllers
     {
         [Route("")]
         [HttpPost]
-        public IHttpActionResult Login(LoginDto dto)
+        public IHttpActionResult Login(LoginRequestDto dto)
         {
             if (dto.Login == "Admin")
                 return Ok(new
                 {
-                    User = dto.Login,
-                    Role = Role.School,
-                    Token = "YWxmZGtzamYgc2RmbDtranNkIGxzbGRqZmxza2RqZiANCnNkZnNsZA=="
+                    user = dto.Login,
+                    role = Role.School,
+                    token = "YWxmZGtzamYgc2RmbDtranNkIGxzbGRqZmxza2RqZiANCnNkZnNsZA=="
                 });
 
             return Ok(new

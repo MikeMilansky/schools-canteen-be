@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace SchoolCanteen.BE.Dto
 {
-    public class LoginDto
+    public class LoginRequestDto
     {
         [JsonProperty(PropertyName = "login")]
         public string Login { get; set; }
