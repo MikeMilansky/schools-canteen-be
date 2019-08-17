@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace SchoolCanteen.BE
 {
@@ -10,7 +11,8 @@ namespace SchoolCanteen.BE
 		public static void Register(HttpConfiguration config)
 		{
             // Web API configuration and services
-            config.EnableCors();
+            var corsAttr = new EnableCorsAttribute("https://schools-canteen-jam.azurewebsites.net", "*", "*");
+            config.EnableCors(corsAttr);
 
             // Web API routes
             config.MapHttpAttributeRoutes();
